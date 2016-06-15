@@ -1,11 +1,11 @@
 {
   "ProjectName": "PASA-Inventarios",
-  "ProjectGuid": "ae2e4dd9-d256-43ca-8ce2-d618fa35a935",
+  "ProjectGuid": "{aef80a5b-1d98-46c7-bf09-6269b23127ac}",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.PASAInventarios",
-  "DisplayName": "PASA-Inventarios",
+  "AppIdentifier": "com.telerik.sampleGroceries",
+  "DisplayName": "PASA",
   "Author": "",
-  "Description": "PASA-Inventarios",
+  "Description": "A NativeScript-built iOS and Android app for managing grocery lists",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
@@ -21,7 +21,7 @@
     "Portrait",
     "Landscape"
   ],
-  "AndroidHardwareAcceleration": "true",
+  "AndroidHardwareAcceleration": "false",
   "iOSStatusBarStyle": "Default",
   "FrameworkVersion": "2.0.0",
   "Framework": "NativeScript"

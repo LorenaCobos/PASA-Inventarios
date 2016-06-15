@@ -1,10 +1,19 @@
-var application = require('application'),
-    mainModule = 'navigation/navigation';
+var applicationModule = require("application");
+var navigation = require("./shared/navigation");
 
-// START_CUSTOM_CODE_nativeScriptApp
-// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
+if (applicationModule.ios) {
+	var AppDelegate = UIResponder.extend({
+		applicationDidFinishLaunchingWithOptions: function () {
+			UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
+			return true;
+		}
+	}, {
+		name: "AppDelegate",
+		protocols: [UIApplicationDelegate]
+	});
+	applicationModule.ios.delegate = AppDelegate;
+}
 
-// END_CUSTOM_CODE_nativeScriptApp
-application.start({
-    moduleName: mainModule
+applicationModule.start({
+	moduleName: navigation.startingPage()
 });

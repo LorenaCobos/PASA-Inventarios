@@ -1,0 +1,55 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" xmlns:dd="nativescript-drop-down" id="id-page"  actionBarHidden="true" xmlns:drawer="nativescript-telerik-ui/sidedrawer" xmlns:lv="nativescript-telerik-ui/listview" backgroundSpanUnderStatusBar="true" >
+	<!-- A drawer is used to show the options menu -->
+	<drawer:rad-side-drawer id="drawer" drawerLocation="Bottom"
+		drawerOpening="drawerOpening" drawerClosing="drawerClosing"
+		android:drawerContentSize="160" ios:drawerContentSize="110">
+		
+		<!-- The main content of the page -->
+		<drawer:rad-side-drawer.mainContent>
+			<grid-layout rows="auto, auto, *" id="main-content">
+				<!-- Row 1: The custom action bar -->
+				<grid-layout row="0" columns="44, *, 44" id="action-bar-custom">
+					<label col="1" android:text="" ios:text="" id="action-bar-label" />
+					<!-- Wrap the image in a stack-layout to give it a bigger tap target -->
+					<stack-layout col="2" tap="menu">
+						<image android:src="res://ic_menu" ios:src="res://menu" stretch="none" id="action-bar-menu-image" />
+					</stack-layout>
+				</grid-layout>
+
+
+				<GridLayout rows="auto, auto, *" columns="auto, *">
+					<dd:DropDown items="{{ items0 }}" id="idDropDown" style="margin-top:120px" selectedIndex="{{ selectedIndex }}"   row="0" colSpan="2" />
+					<Label text="" row="1" col="0" fontSize="18" verticalAlignment="bottom" />
+				</GridLayout>
+				<StackLayout  rows="auto, auto, *" columns="auto, *">
+					<button text="Aceptar" id="submit-button1" style="margin-top:170px" tap="tapVerify" />
+				</StackLayout >
+
+			</grid-layout>
+		</drawer:rad-side-drawer.mainContent>
+
+		<!-- The drawer content—aka the options menu -->
+		<drawer:rad-side-drawer.drawerContent>
+			<stack-layout id="drawer-content">
+				<label text="Perfil" tap="share" class="drawer-content-label" />
+				<label text="Carga de Datos" tap="signOut" class="drawer-content-label" />
+				<label text="Salir" tap="signOut" class="drawer-content-label" />
+			</stack-layout>
+		</drawer:rad-side-drawer.drawerContent>
+
+	</drawer:rad-side-drawer>
+	<!--
+	<page.actionBar>
+		<action-bar title="Elije una empresa" />
+	</page.actionBar>
+	<scroll-view>
+		<stack-layout>
+			<grid-layout>
+				<dd:DropDown items="{{ items }}" selectedIndex="{{ selectedIndex }}" row="0" colSpan="2" />
+				<Label text="Selected Index:" row="1" col="0" fontSize="18" verticalAlignment="bottom"/>
+				<TextField text="{{ selectedIndex }}" row="1" col="1" />
+			</grid-layout>
+			<button text="Aceptar" id="reset-button" tap="tapVerify" />
+		</stack-layout>
+	</scroll-view>-->
+</Page>
