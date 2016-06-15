@@ -1,0 +1,28 @@
+{
+  "ProjectName": "PASA-Inventarios",
+  "ProjectGuid": "ae2e4dd9-d256-43ca-8ce2-d618fa35a935",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.PASAInventarios",
+  "DisplayName": "PASA-Inventarios",
+  "Author": "",
+  "Description": "PASA-Inventarios",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "2.0.0",
+  "Framework": "NativeScript"
+}
